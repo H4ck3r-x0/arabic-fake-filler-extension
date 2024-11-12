@@ -46,4 +46,17 @@ class ArabicDataGenerator {
   generatePhoneNumber() {
     return `+966${Math.floor(Math.random() * 1000000000)}`;
   }
+
+  generatePassword() {
+    const chars =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+    let password = "";
+    for (let i = 0; i < 12; i++) {
+      password += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return password;
+  }
 }
+
+// Make it available globally
+window.ArabicDataGenerator = ArabicDataGenerator;
