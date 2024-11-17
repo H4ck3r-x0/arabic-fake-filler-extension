@@ -2,7 +2,6 @@
   "manifest_version": 3,
   "name": "Arabic Fake Filler",
   "version": "1.0",
-  "description": "Fill forms with Arabic dummy data",
   "permissions": ["activeTab", "scripting"],
   "action": {
     "default_icon": {
@@ -17,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["scripts/arabicDataGenerator.js"]
+      "js": ["scripts/arabicDataGenerator.js", "scripts/content.js"]
     }
   ]
 }

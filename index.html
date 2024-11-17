@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>اختبار ملء النموذج العربي</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .form-group {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .form-section {
+        margin-bottom: 30px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .radio-group,
+      .checkbox-group {
+        margin: 10px 0;
+      }
+      .radio-group label,
+      .checkbox-group label {
+        display: inline-block;
+        margin-right: 15px;
+        font-weight: normal;
+      }
+      .radio-group input,
+      .checkbox-group input {
+        width: auto;
+        margin-left: 5px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .required:after {
+        content: " *";
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>نموذج اختبار البيانات العربية</h1>
+    <form id="testForm">
+      <!-- Personal Information Section -->
+      <div class="form-section">
+        <h2>المعلومات الشخصية</h2>
+
+        <div class="form-group">
+          <label for="title" class="required">اللقب</label>
+          <select id="title" name="title" required>
+            <option value="">اختر اللقب</option>
+            <option value="mr">السيد</option>
+            <option value="mrs">السيدة</option>
+            <option value="dr">دكتور</option>
+            <option value="eng">مهندس</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="firstName" class="required">الاسم الأول</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="أدخل الاسم الأول"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="lastName" class="required">اسم العائلة</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="أدخل اسم العائلة"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="birthDate">تاريخ الميلاد</label>
+          <input type="date" id="birthDate" name="birthDate" />
+        </div>
+
+        <div class="form-group">
+          <label>الجنس</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="male" /> ذكر</label>
+            <label
+              ><input type="radio" name="gender" value="female" /> أنثى</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Information Section -->
+      <div class="form-section">
+        <h2>معلومات الاتصال</h2>
+
+        <div class="form-group">
+          <label for="email" class="required">البريد الإلكتروني</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@domain.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="required">رقم الجوال</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="05xxxxxxxx"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="alternativePhone">رقم هاتف بديل</label>
+          <input
+            type="tel"
+            id="alternativePhone"
+            name="alternativePhone"
+            placeholder="05xxxxxxxx"
+          />
+        </div>
+      </div>
+
+      <!-- Address Section -->
+      <div class="form-section">
+        <h2>العنوان</h2>
+
+        <div class="form-group">
+          <label for="country">الدولة</label>
+          <select id="country" name="country">
+            <option value="">اختر الدولة</option>
+            <option value="SA">المملكة العربية السعودية</option>
+            <option value="AE">الإمارات العربية المتحدة</option>
+            <option value="EG">مصر</option>
+            <option value="KW">الكويت</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="city">المدينة</label>
+          <select id="city" name="city">
+            <option value="">اختر المدينة</option>
+            <option value="riyadh">الرياض</option>
+            <option value="jeddah">جدة</option>
+            <option value="dammam">الدمام</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="address">العنوان التفصيلي</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="3"
+            placeholder="أدخل العنوان التفصيلي"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="postalCode">الرمز البريدي</label>
+          <input
+            type="text"
+            id="postalCode"
+            name="postalCode"
+            placeholder="12345"
+          />
+        </div>
+      </div>
+
+      <!-- Professional Information -->
+      <div class="form-section">
+        <h2>المعلومات المهنية</h2>
+
+        <div class="form-group">
+          <label for="occupation">المهنة</label>
+          <select id="occupation" name="occupation">
+            <option value="">اختر المهنة</option>
+            <option value="engineer">مهندس</option>
+            <option value="doctor">طبيب</option>
+            <option value="teacher">معلم</option>
+            <option value="other">أخرى</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">سنوات الخبرة</label>
+          <input
+            type="number"
+            id="experience"
+            name="experience"
+            min="0"
+            max="50"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>المهارات</label>
+          <div class="checkbox-group">
+            <label
+              ><input type="checkbox" name="skills" value="computer" /> الحاسب
+              الآلي</label
+            >
+            <label
+              ><input type="checkbox" name="skills" value="english" /> اللغة
+              الإنجليزية</label
+            >
+            <label
+              ><input type="checkbox" name="skills" value="management" />
+              الإدارة</label
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Information -->
+      <div class="form-section">
+        <h2>معلومات الحساب</h2>
+
+        <div class="form-group">
+          <label for="username">اسم المستخدم</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="أدخل اسم المستخدم"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">كلمة المرور</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="أدخل كلمة المرور"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">تأكيد كلمة المرور</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="أعد إدخال كلمة المرور"
+          />
+        </div>
+      </div>
+
+      <!-- Additional Information -->
+      <div class="form-section">
+        <h2>معلومات إضافية</h2>
+
+        <div class="form-group">
+          <label for="notes">ملاحظات</label>
+          <textarea
+            id="notes"
+            name="notes"
+            rows="4"
+            placeholder="أدخل أي ملاحظات إضافية"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="preferredContact">طريقة التواصل المفضلة</label>
+          <select id="preferredContact" name="preferredContact">
+            <option value="">اختر طريقة التواصل</option>
+            <option value="email">البريد الإلكتروني</option>
+            <option value="phone">الهاتف</option>
+            <option value="sms">الرسائل النصية</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit">إرسال النموذج</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("testForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("تم إرسال النموذج!");
+        });
+    </script>
+  </body>
+</html>
